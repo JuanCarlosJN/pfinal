@@ -1,3 +1,11 @@
+<?php
+	include('login.php'); // Includes Login Script
+
+	if(isset($_SESSION['login_user'])){
+		header("location: profile.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -67,25 +75,25 @@
 					<div class="span5">
 						<h4 class="title"><span class="text"><strong>Login</strong> Form</span></h4>
 
-						<form action="#" method="post">
+						<form action="" method="post">
 							<input type="hidden" name="next" value="/">
 							<fieldset>
 								<div class="control-group">
 									<label class="control-label">Email Address</label>
 									<div class="controls">
-										<input type="text" placeholder="Escribe tu email registrado" id="username" class="input-xlarge">
+										<input name="email_log" type="text" placeholder="Escribe tu email registrado" id="name" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Password</label>
 									<div class="controls">
-										<input type="password" placeholder="Escribe tu password registrado" id="password" class="input-xlarge">
+										<input name="password_log" type="password" placeholder="Escribe tu password registrado" id="password" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
-									<input tabindex="3" class="btn btn-inverse large" type="submit" value="Sign into your account">
+									<input tabindex="3" class="btn btn-inverse large" name="submit" type="submit" value="Login">
 									<hr>
-									<p class="reset">Recover your <a tabindex="4" href="#" title="Recover your username or password">username or password</a></p>
+									<span><?php echo $error; ?></span>
 								</div>
 							</fieldset>
 						</form>
