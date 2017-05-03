@@ -68,12 +68,12 @@
 			</section>
 			<section class="header_text sub">
 			<img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
-				<h4><span>Login or Regsiter</span></h4>
+				<h4><span>Login || Registro</span></h4>
 			</section>
 			<section class="main-content">
 				<div class="row">
 					<div class="span5">
-						<h4 class="title"><span class="text"><strong>Login</strong> Form</span></h4>
+						<h4 class="title"><span class="text"><strong>Login</strong></span></h4>
 
 						<form action="" method="post">
 							<input type="hidden" name="next" value="/">
@@ -92,15 +92,16 @@
 								</div>
 								<div class="control-group">
 									<input tabindex="3" class="btn btn-inverse large" name="submit" type="submit" value="Login">
-									<hr>
-									<span><?php echo $error; ?></span>
+									<span>
+    									<?php echo $error; ?>
+  								</span>
 								</div>
 							</fieldset>
 						</form>
 
 					</div>
 					<div class="span7">
-						<h4 class="title"><span class="text"><strong>Register</strong> Form</span></h4>
+						<h4 class="title"><span class="text"><strong>Registro</strong></span></h4>
 						<form action="#" method="post" class="form-stacked">
 							<fieldset>
 								<div class="control-group">
