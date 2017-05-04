@@ -79,9 +79,10 @@
 							<input type="hidden" name="next" value="/">
 							<fieldset>
 								<div class="control-group">
+
 									<label class="control-label">Email Address</label>
 									<div class="controls">
-										<input name="email_log" type="text" placeholder="Escribe tu email registrado" id="name" class="input-xlarge">
+										<input name="email_log" type="email" placeholder="Escribe tu email registrado" id="name" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
@@ -91,9 +92,9 @@
 									</div>
 								</div>
 								<div class="control-group">
-									<input tabindex="3" class="btn btn-inverse large" name="submit" type="submit" value="Login">
+									<input tabindex="3" class="btn btn-inverse large" name="submit_login" type="submit" value="Login"><br>
 									<span>
-    									<?php echo $error; ?>
+    									<?php echo $messlog; ?>
   								</span>
 								</div>
 							</fieldset>
@@ -105,28 +106,69 @@
 						<form action="#" method="post" class="form-stacked">
 							<fieldset>
 								<div class="control-group">
-									<label class="control-label">Username</label>
+									<label class="control-label">Nombre</label>
 									<div class="controls">
-										<input type="text" placeholder="Enter your username" class="input-xlarge">
+										<input value="<?php echo $nombre;?>" name="nombre" maxlength="45" type="text" placeholder="Escribe tu nombre" class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Apellido</label>
+									<div class="controls">
+										<input value="<?php echo $apellido;?>" name="apellido" maxlength="45" type="text" placeholder="Escribe tu apellido" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Email address:</label>
 									<div class="controls">
-										<input type="password" placeholder="Enter your email" class="input-xlarge">
+										<input value="<?php echo $correo;?>" name="correo" maxlength="45" type="email" placeholder="Enter your email" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Password:</label>
 									<div class="controls">
-										<input type="password" placeholder="Enter your password" class="input-xlarge">
+										<input value="<?php echo $passwd;?>" name="passwd" maxlength="45" type="password" placeholder="Escribe tu password" class="input-xlarge">
 									</div>
 								</div>
 								<div class="control-group">
-									<p>Now that we know who you are. I'm not a mistake! In a comic, you know how you can tell who the arch-villain's going to be?</p>
+									<label class="control-label">Password Again:</label>
+									<div class="controls">
+										<input value="<?php echo $passwda;?>" name="passwda" maxlength="45" type="password" placeholder="Escribe tu password" class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Fecha de Nacimiento:</label>
+									<div class="controls">
+										<input value="<?php echo $fechanac;?>" name="fechanac" min="1917-01-01" type="date" class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Número de Tarjeta:</label>
+									<div class="controls">
+										<input value="<?php echo $tarjeta;?>" name="tarjeta" maxlength="16" type="text" placeholder="xxxx-xxxx-xxxx-xxx" class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Dirección:</label>
+									<div class="controls">
+										<input value="<?php echo $direccion;?>" name="direccion" maxlength="80" type="text" placeholder="Ej. Av. xxx..." class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Código Postal:</label>
+									<div class="controls">
+										<input value="<?php echo $cp;?>" name="cp" min="10000" max="999999" type="number" placeholder="Ej. 00000" class="input-xlarge">
+									</div>
+								</div>
+								<div class="control-group">
+									<p>Los datos que ingreses en SirenaMorena.com estan 100% seguros.</p>
 								</div>
 								<hr>
-								<div class="actions"><input tabindex="9" class="btn btn-inverse large" type="submit" value="Create your account"></div>
+								<div class="actions">
+									<input tabindex="9" class="btn btn-inverse large" name="submit_register" type="submit" value="Crear Cuenta"><br><br>
+									<span>
+    									<?php echo $messreg; ?>
+  								</span>
+								</div>
 							</fieldset>
 						</form>
 					</div>
