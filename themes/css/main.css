@@ -776,3 +776,10 @@ section.our_client .row{
 		border-bottom:1px solid #eee;
 	}
 }
+#tablita {
+    overflow: auto;
+}
+
+#myDIV {
+    overflow: auto;
+}

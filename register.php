@@ -1,8 +1,8 @@
 <?php
-	include('login.php'); // Includes Login Script
+	include('js/login.php'); // Includes Login Script
 
 	if(isset($_SESSION['login_user'])){
-		header("location: profile.php");
+		header("location: myaccount.php");
 	}
 ?>
 
@@ -11,6 +11,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>SirenaMorena: Registro|Login</title>
+		<link rel="icon" type="image/png" href="img/favicon.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
@@ -42,9 +43,9 @@
 				<div class="span8">
 					<div class="account pull-right">
 						<ul class="user-menu">
-							<li><a href="#">Mi Cuenta</a></li>
-							<li><a href="cart.html">Carrito</a></li>
-							<li><a href="checkout.html">Checkout</a></li>
+							<li><a href="myaccount.php">Mi Cuenta</a></li>
+							<li><a href="cart.php">Carrito</a></li>
+							<li><a href="checkout.php">Checkout</a></li>
 							<li><a href="register.php">Login</a></li>
 						</ul>
 					</div>
@@ -54,14 +55,12 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">
-					<a href="index.html" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo imgcenter" alt="" height="42" width="110"></a>
+					<a href="index.php" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo imgcenter" alt="" height="42" width="110"></a>
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="./products.html">MUJER</a>
-							</li>
-							<li><a href="./products.html">HOMBRE</a></li>
-							<li><a href="./products.html">ACCESORIOS</a>
-							</li>
+							<li><a href="products.php?param=1">MUJER</a></li>
+							<li><a href="products.php?param=2">HOMBRE</a></li>
+							<li><a href="products.php?param=3">ACCESORIOS</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -179,17 +178,17 @@
 					<div class="span3">
 						<h4>Navegación</h4>
 						<ul class="nav">
-							<li><a href="./index.html">Inicio</a></li>
-							<li><a href="./about.html">Acerca de</a></li>
-							<li><a href="./contact.html">Contáctanos</a></li>
-							<li><a href="./cart.html">Carrito</a></li>
-							<li><a href="./register.html">Login</a></li>
+							<li><a href="./index.php">Inicio</a></li>
+							<li><a href="./about.php">Acerca de</a></li>
+							<li><a href="./contact.php">Contáctanos</a></li>
+							<li><a href="./cart.php">Carrito</a></li>
+							<li><a href="./register.php">Login</a></li>
 						</ul>
 					</div>
 					<div class="span4">
 						<h4>Mi Cuenta</h4>
 						<ul class="nav">
-							<li><a href="#">Mi Cuenta</a></li>
+							<li><a href="myaccount.php">Mi Cuenta</a></li>
 							<li><a href="#">Historial de Compras</a></li>
 						</ul>
 					</div>
@@ -213,7 +212,7 @@
 		<script>
 			$(document).ready(function() {
 				$('#checkout').click(function (e) {
-					document.location.href = "checkout.html";
+					document.location.href = "checkout.php";
 				})
 			});
 		</script>
